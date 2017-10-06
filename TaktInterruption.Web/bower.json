@@ -1,0 +1,13 @@
+{
+  "name": "Takt Interruption",
+  "description": "An application that helps users track takt (aka - cycle time or process time) interruptions",
+  "private": true,
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "jquery-validation": "^1.17.0",
+    "jquery-validation-unobtrusive": "^3.2.6",
+    "bootstrap": "^3.3.7",
+    "bootswatch": "^3.3.7",
+    "font-awesome": "^4.7.0"
+  }
+}
