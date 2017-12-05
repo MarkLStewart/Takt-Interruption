@@ -12,4 +12,10 @@
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\TaktInterruption.Common\TaktInterruption.Common.csproj" />
+    <ProjectReference Include="..\TaktInterruption.Core\TaktInterruption.Core.csproj" />
+    <ProjectReference Include="..\TaktInterruption.Infrastructure\TaktInterruption.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>

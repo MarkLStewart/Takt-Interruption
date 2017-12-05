@@ -1,0 +1,42 @@
+﻿@model IEnumerable<TaktInterruption.Web.ViewModels.Interruption.IndexViewModel>
+@{
+    ViewBag.Title = "Interruptions";
+}
+
+<h3>Interruptions</h3>
+
+<div class="row" style="margin-top:40px;">
+    <div class="col-md-12">
+        <p><a asp-controller="interruption" asp-action="create" class="btn btn-success btn-sm fa fa-plus"> Log New Interruption</a></p>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Interrupted</th>
+                    <th>Responsible</th>
+                    <th>Description</th>
+                    <th>Created By</th>
+                    <th>Date Entered</th>
+                    <th>&nbsp;</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Id</td>
+                        <td>@item.AreaName</td>
+                        <td>@item.CategoryName</td>
+                        <td>@item.Description</td>
+                        <td>@item.CreatedBy</td>
+                        <td>@item.DateTimeCreated.ToString()</td>
+                        <td>
+                            <a asp-controller="Interruption" asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning btn-sm fa fa-edit"> Edit</a>&nbsp;&nbsp;
+                            <button class="btn btn-danger btn-sm fa fa-trash"> Delete</button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
